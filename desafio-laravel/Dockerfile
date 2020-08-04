@@ -15,8 +15,6 @@ RUN chmod 755 /usr/local/bin/dockerize
 WORKDIR /var/www
 RUN rm -rf /var/www/html
 
-COPY ./.docker/app/.env.tmpl .env.tmpl
-
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 RUN ln -s public html
