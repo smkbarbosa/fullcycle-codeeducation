@@ -7,5 +7,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 RUN rm /etc/nginx/conf.d/default.conf
 
+WORKDIR /var/www
+
 RUN chmod 755 /usr/local/bin/dockerize
 
